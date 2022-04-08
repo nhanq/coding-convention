@@ -36,6 +36,7 @@ const Footer = () => {
                         </div>
                         <div className="footer-menu-item">
                             <p style={{ color: "white" }}>Address hehehe</p>
+                            <p style={{ color: "white" }}>Address aololo</p>
                             <p style={{ color: "white" }}>127, Westwood Lane DA15 9PS, Sidcup London UK</p>
                         </div>
                     </div>
