@@ -10,7 +10,7 @@ const Cart = () => {
     const handleButtonMinus = (product) => {
         dispatch(delCart(product))
     }
-    const ShowProduct = () => {
+    const showProduct = () => {
         return (
             <>
                 {product.map((item) => {
@@ -46,9 +46,8 @@ const Cart = () => {
     console.log(product);
     return (
         <>
-            {product.length === 0 ? <>Emtpy</> : <ShowProduct />}
+            { product.length === 0 ? <>Emtpy</> : <showProduct /> }
         </>
     );
 }
-
 export default Cart;

@@ -8,7 +8,7 @@ const Product = () => {
     const [product, setProduct] = useState([]);
     const [loading, setLoading] = useState(false);
     const dispatch = useDispatch();
-    const addProduct = (product)=>{
+    const addProduct = (product) => {
         dispatch(addCart(product))
     }
     useEffect(() => {
@@ -20,7 +20,7 @@ const Product = () => {
             console.log(product);
         }
         getProduct();
-    }, []);
+    }, [])
 
     const Loading = () => {
         return (
@@ -45,7 +45,7 @@ const Product = () => {
 
             </>
         );
-    };
+    }
     const ShowProducts = () => {
         return (
             <>
@@ -75,13 +75,11 @@ const Product = () => {
     return (
         <div>
             <div className="container my-5 py-5">
-
                 <div className="row py-4 justify-content-center">
-                    {loading ? <Loading /> : <ShowProducts />}
+                    { loading ? <Loading /> : <ShowProducts />}
                 </div>
             </div>
         </div>
     );
 }
-
 export default Product;

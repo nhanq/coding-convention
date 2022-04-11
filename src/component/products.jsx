@@ -9,7 +9,7 @@ const Products = () => {
     const [filter, setFilter] = useState(data);
     const [loading, setLoading] = useState(false);
     let componentMounted = true;
-    useEffect(() => {
+    useEffect( () => {
         const getProducts = async () => {
             setLoading(true);
             const response = await fetch("https://fakestoreapi.com/products");
@@ -21,10 +21,7 @@ const Products = () => {
             }
             return () => {
                 componentMounted = false
-
             }
-
-
         }
         getProducts();
     }, []);
@@ -74,14 +71,10 @@ const Products = () => {
                     )
                 })}
             </>
-        )
-
-
-    }
+        )}
     const filterProduct =(cat)=>{
-        const updateList = data.filter((x)=>x.category===cat);
+        const updateList = data.filter((x) => x.category === cat);
         setFilter(updateList);
-
     }
     return (
         <div>
@@ -97,7 +90,6 @@ const Products = () => {
                 </div>
             </div>
         </div>
-    );
+    )
 }
-
 export default Products;
